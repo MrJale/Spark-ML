@@ -35,14 +35,14 @@ object CensusIncome{
       .option("sep",",")
       .option("header","true")
       .option("inferSchema","true")
-      .csv("data/train.csv")
+      .csv(args(0))
       .as[myschema]
 
     val test=spark.read
       .option("sep",",")
       .option("header","true")
       .option("inferSchema","true")
-      .csv("data/test.csv")
+      .csv(args(1))
       .as[myschema]
 
     val cols = Array("age","workclass","fnlwgt","education","educationnum","maritalstatus","occupation","relationship","race",
