@@ -29,7 +29,7 @@ object CensusIncome2{
     //Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("org").setLevel(Level.ERROR)
 
-    val spark = SparkSession.builder.appName("CensusIncome").master("local[*]").getOrCreate()
+    val spark = SparkSession.builder.appName("CensusIncome2").master("local[*]").getOrCreate()
 
     import spark.implicits._
     val train=spark.read
